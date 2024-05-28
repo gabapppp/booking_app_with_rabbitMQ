@@ -10,7 +10,7 @@ export class CreateBookingTable1702553396443 implements MigrationInterface {
     
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(
-            `ALTER TABLE "booking" ALTER COLUMN "name" RENAME TO "title"`,
+            `DROP TABLE "booking"`,
         )
     }
 }
